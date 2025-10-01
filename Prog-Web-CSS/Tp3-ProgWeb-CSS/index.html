@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Práctico CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>1. Introducción a CSS </h2>
+    <p>
+        El lenguaje <b>CSS (Cascading Style Sheets)</b> es el código que utilizamos para darle <u>estilo</u> a los documentos escritos en HTML. 
+        Sirve para <u>separar el contenido</u> (el texto y la estructura definida en HTML) <u>de su presentación</u> (colores, fuentes, tamaños, márgenes, etc.), 
+        permitiendo que las páginas web sean visualmente atractivas y consistentes.
+    </p>
+    <hr>
+
+
+    <h2>2. Selectores en CSS </h2>
+    <div class="parrafos-selectores">
+        <p id="parrafo-id">
+            Este es el primer párrafo y se le dará estilo usando un selector de ID (#).
+        </p>
+        
+        <p class="parrafo-clase">
+            Este es el segundo párrafo y se le dará estilo usando un selector de CLASE (.).
+        </p>
+        
+        <p>
+            Este es el tercer párrafo y se le dará estilo usando un selector de ETIQUETA (p).
+        </p>
+    </div>
+    <hr>
+
+    <h2>3. Modificación de Texto</h2>
+    <h1 class="titulo-efecto">Ejemplo de Estilos de Texto Avanzados</h1>
+    <p class="parrafo-espaciado">
+        Este párrafo tiene un **interlineado (line-height) y un espaciado entre letras (letter-spacing) considerablemente grandes**. 
+        Esto se usa a veces para crear un efecto de diseño particular o para mejorar la legibilidad en ciertos contextos, aunque a menudo puede ser excesivo.
+    </p>
+    <blockquote class="cita-personalizada">
+        "El diseño web es 95% tipografía, pero se ignora un 95% del tiempo."
+        <br>— Oliver Reichenstein
+    </blockquote>
+    <hr>
+
+    <h2>4. Modelo de Caja </h2>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <hr>
+
+
+    <h2>5. Display y Visibility</h2>
+
+    <div class="galeria-contenedor block-container">
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+    </div>
+
+    <div class="galeria-contenedor inline-container">
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+    </div>
+
+    <div class="galeria-contenedor inline-block-container">
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+        <div class="tarjeta-ejemplo">
+            <div class="cuadrado-tarjeta"></div>
+            <h2>Título de la Tarjeta</h2>
+            <p>Este es el texto de ejemplo de la tarjeta. Aplicaremos border, padding, margin y box-shadow aquí.</p>
+        </div>
+    </div>
+    
+    <div class="contenedor-btn">
+        <button class="button btn-display-none">Botón con display: none</button>
+        <button class="button btn-visibility-hidden">Botón con visibility: hidden</button>
+    </div>
+    
+    <p class="explicacion-visibilidad">
+        El botón con <b>display: none;</b> es eliminado completamente del flujo del documento, por lo que no ocupa espacio. En cambio, el botón con <b>visibility: hidden;</b> solo se oculta a la vista, pero sigue ocupando su espacio en el layout.
+    </p>
+    <hr>
+
+    <h2>6. Variables CSS</h2>
+    <div class="tarjeta-perfil">
+        <div class="avatar"></div>
+        <h3>Perfil de Usuario</h3>
+        <p>Esta tarjeta usa Variables CSS. Cambia los valores en :root para un tema rápido.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="Registro" content="Registro de usuarios">
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <h1>Registro de usuario</h1>
+    </header>
+    <main>
+        <fieldset>
+        <legend><strong>Datos personales</strong></legend>
+        <form>
+        <form action="">
+            <div class="input-email">
+                <label for="email"><b>Email</b></label>
+                <br>
+                <input id="email" type="email" required placeholder="Correo electrónico">
+            </div>
+            <div class="input-password">
+                <label for="password"><b>Contraseña</b></label>
+                <br>
+                <input id="password" type="password" required placeholder="Contraseña">
+            </div>
+            <div class="input-genero">
+                <label for="genero"><b>Genero</b></label>
+                <br>
+                <input id="genero" type="radio" name="genero" value="masculino" required>Masculino
+                <br>
+                <input id="genero" type="radio" name="genero" value="femenino" required>Femenino
+            </div>
+            <div class="input-interes">
+                <label for="interes"><b>Interes</b></label>
+                <br>
+                <input type="checkbox" name="interes" value="deportes">Deportes
+                <br>
+                <input type="checkbox" name="interes" value="deportes">Lectura
+                <br>
+                <input type="checkbox" name="interes" value="musica">Música
+            </div>
+            <div class="input-pais">
+                <label for="pais"><b>País</b></label>
+                <br>
+                <select name="pais" id="pais">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Paraguay">Paraguay</option>
+                </select>
+            </div>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        </fieldset>
+        <section>
+                <label for="comentarios"><b>Comentarios</b></label>
+                <br>
+                <textarea name="comentarios" id="comentarios" placeholder="..."></textarea>
+                <br>
+                <button type="submit">Enviar comentario</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 - Juan Cruz Ana</p>
+    </footer>
+</body>
+</html>

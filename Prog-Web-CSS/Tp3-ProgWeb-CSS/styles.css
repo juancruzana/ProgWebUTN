@@ -1,0 +1,149 @@
+:root {
+    --color-fondo: #f0fff0;
+    --color-texto: #335533;
+    --color-acento: #4CAF50;
+}
+
+#parrafo-id {
+    color: darkred;
+    font-weight: bold;
+    border: 1px dashed darkred;
+}
+
+.parrafo-clase {
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.titulo-efecto {
+    text-transform: uppercase;
+    color: #4a4a4a;
+    font-size: 2.5em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); 
+}
+
+.parrafo-espaciado {
+    line-height: 3; 
+    letter-spacing: 0.2em; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.cita-personalizada {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    background-color: #f0f0f0;
+    border-left: 5px solid darkorange;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.tarjeta-ejemplo {
+    margin: 40px; 
+    border: 1px solid #ddd;
+    padding: 20px; 
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cuadrado-tarjeta {
+    width: 50px;
+    height: 50px;
+    background-color: darkgreen;
+    margin: 0 auto 15px auto; 
+}
+
+
+
+.galeria-contenedor {
+    border: 1px dashed #ccc;
+}
+
+.block-container .tarjeta-ejemplo {
+    display: block;
+}
+
+.inline-container .tarjeta-ejemplo {
+    display: inline; 
+}
+
+.inline-block-container .tarjeta-ejemplo {
+    display: inline-block; 
+}
+
+
+
+.contenedor-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    display: block;
+    align-items: center;
+    margin: 10px;
+    box-shadow: #4a4a4a 10px 3px 3px;
+    height: 30px;
+    width: 200px;
+}
+
+.btn-display-none:active {
+    display: none; 
+}
+
+.btn-visibility-hidden:active {
+    visibility: hidden; 
+}
+
+.explicacion-visibilidad {
+    font-size: 0.9em;
+    color: #666;
+    border-left: 3px solid orange;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+
+
+.tarjeta-perfil {
+    width: 300px;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+    text-align: center;
+    
+    /* Usa esas variables en los estilos de la tarjeta de perfil */
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: 3px solid var(--color-acento); /* Color de borde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-perfil h3 {
+    color: var(--color-acento);
+    margin-top: 5px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-acento);
+    margin: 0 auto 10px auto;
+    border: 3px solid var(--color-texto);
+}
