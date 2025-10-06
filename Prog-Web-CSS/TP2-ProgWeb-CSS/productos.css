@@ -1,24 +1,102 @@
-body{
-    border: 5px solid #000;
+:root {
+    --fondo-body: #f4f4f9;
+    --producto1: #007bff;
+    --producto2: #28a745;
+    --titulo-texto: #000;
+    --parrafo-texto: #666;
+    --boton: #ffc107;
+    --boton-hover: #dc3545;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fondo-body);
+    margin: 0;
     padding: 20px;
-    min-height: 500px;
-    row-gap: 200px;
-    /* display: flex; */
-
+    text-align: center; 
 }
 
-#parrafo1{
-    background: #049;
+.contenedor-productos {
+    display: inline-block;
+    padding: 15px;
+    max-width: 800px; 
+    width: 100%;
+    margin: 0 auto;
 }
 
-.parrafo2{
-    background: #949;
+.tarjeta-producto {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 20px;
+    margin: 15px ;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
 }
 
-p:nth-child(4){
-    background: #456;
+.tarjeta-producto:hover {
+    transform:  translateY(-2px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-h1{
-    box-shadow: #000 5px 5px;
+.imagen-cuadra {
+    width: 100%; 
+    height: 180px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.producto-a {
+    background-color: var(--producto1); 
+}
+
+.producto-b {
+    background-color: var(--producto2); 
+}
+
+.titulo-producto {
+    font-size: 1.2em;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.descripcion-producto {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.boton-compra {
+    background-color: var(--boton); 
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.boton-compra:hover {
+    background-color: var(--boton-hover); 
+    color: #fff;
+    transform: scale(1.05); 
+}
+
+@media (max-width: 768px) {
+    .contenedor-productos {
+        flex-direction: column;
+    }
+
+    .tarjeta-producto {
+        width: 80%; 
+        max-width: 400px;
+    }
 }
