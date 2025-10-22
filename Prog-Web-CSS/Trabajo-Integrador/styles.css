@@ -1,0 +1,328 @@
+/* === Reset y básicos === */ * {   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {   
+    font-family: system-ui, -apple-system;
+    line-height: 1.5;
+    color: var(--text);
+    background: #f8fafc;
+}
+
+/* === Variables === */ 
+:root {   
+    --bg: #f8fafc;
+    --panel: #fff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-600: #1d4ed8;
+    --primary-700: #1e40af;
+    --accent: #16a34a;
+    --danger: #dc2626;
+    --radius: 14px;
+    --shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+    --container: 1100px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+} 
+
+
+/* Header */
+header {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    padding: var(--space-4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-wrap: nowrap; /* prevent children from wrapping to next line */
+}
+
+.header__logo-mark { 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(135deg, var(--primary), var(--accent));  
+    color: #fff; 
+    font-weight: 800; 
+} 
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    flex-shrink: 0;/* keep logo compact */
+}
+
+.nav {
+    position: relative;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+/* Nav Responsive */
+.nav__toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: var(--space-2);
+    border-radius: var(--radius);
+}
+
+.nav__toggle-label:hover {
+    background: var(--bg);
+}
+
+.nav__close{
+    display: none;
+}
+
+
+.nav__toggle:checked ~ .nav__list {
+    transform: translateX(0);
+}
+
+.nav__item {
+    width: 100%;
+}
+
+.nav__link {
+    display: block;
+    padding: var(--space-4);
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+/* Menú responsive */
+@media (max-width: 600px) {
+    .nav__toggle-label {
+        display: flex;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .nav__list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        background: var(--panel);
+        flex-direction: column;
+        padding: var(--space-12) var(--space-4);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: var(--shadow);
+    }
+
+    .nav__close {
+        position: absolute;
+        top: var(--space-4);
+        right: var(--space-4);
+        padding: var(--space-2);
+        cursor: pointer;
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text);
+        transition: all 0.2s ease;
+    }
+
+
+    .top-row{
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .sistem_buttons{
+        flex: none;
+        width: 100%;
+        margin: 0 var(--space-3) var(--space-3) var(--space-3);
+    }
+    .product-card{
+        flex: none;
+        width: 100%;
+        margin: 0 var(--space-3) var(--space-3) var(--space-3);
+    }
+}
+
+.header__logo, a {
+    text-decoration: none;
+    color: var(--text);
+    font-family: system-ui, -apple-system;
+    font-weight: bold;
+}
+
+
+/* Main */
+main{
+    max-width: var(--container);
+    margin: var(--space-8) auto;
+    padding: 0 var(--space-4);
+}
+
+.top-row{
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+}
+
+aside, section, .tajeta {
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    margin: var(--space-3);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+}
+
+.section{
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+}
+
+.section__inner{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+}
+
+aside,section, .tajeta {
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    margin: var(--space-3);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+}
+
+.btn-group{
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+/* SISTEMA DE BOTONES */
+.sistem_buttons{
+    display: inline-block;
+}
+
+.button{
+    border-radius: var(--radius);
+    padding:  var(--space-1) var(--space-4);
+    border: none;
+    font-weight: bold;
+}
+
+.button--primary{
+    background: var(--primary);
+    color: #fff;
+}
+
+.button--secondary{
+    background: #999;
+    color: #000;
+}
+
+.button--outline{
+    background: var(--bg);
+    border: 2px solid var(--primary);
+    color:  var(--primary);
+}
+
+.button--danger{
+    background: var(--danger);
+    color: #fff;
+}
+
+.button--icon{
+    display: flex;
+    align-items: center;
+    background: var(--primary);
+    color: #fff;
+}
+
+
+/* TARJETA DE PRODUCTO */
+.product-card{
+    display: inline-block;
+    max-width: 400px;
+}
+.product-card__content{
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    margin: var(--space-3);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+}
+
+.product-card__media{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-card__badge{
+    display: inline-block;
+    position: absolute;
+    z-index: 4 ;
+    margin: 5px;
+    padding: 3px 6px;
+    background: orange;
+    border-radius: var(--radius);
+}
+
+.product-card__description{
+    color: var(--muted);
+}
+
+.product-card__price, .product-card__old-price{
+    display: inline;
+}
+
+.product-card__price{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.product-card__old-price{
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+.button--add{
+    display: flex;
+    align-items: center;
+        background: var(--bg);
+    border: 2px solid var(--primary);
+    color:  var(--primary);
+}
+
+.button--buy{
+    background: var(--primary);
+    color: #fff;
+}

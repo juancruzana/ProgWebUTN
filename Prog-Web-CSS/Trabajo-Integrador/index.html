@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mi Tienda</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#top" class="header__logo">
+            <span class="header__logo-mark">M</span>
+            <span class="header__logo-text">Mi Tienda</span>
+        </a>
+
+
+        <nav class="nav">
+            <input type="checkbox" id="nav-toggle" class="nav__toggle" hidden>
+            <label for="nav-toggle" class="nav__toggle-label">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+            </label>
+            <ul class="nav__list">
+                <label for="nav-toggle" class="nav__close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </label>
+                <li class="nav__item"><a href="#novedades" class="nav__link">Novedades</a></li>
+                <li class="nav__item"><a href="#ofertas" class="nav__link">Ofertas</a></li>
+                <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+    <div class="top-row">
+    <!-- ASIDE: SISTEMA DE BOTONES -->
+    <aside class="sistem_buttons">
+        <h2 class="sistem_buttons__title">1) Sistema de Botones</h2>
+        <div class="btn-group">
+            <button class="button button--primary">Primario</button>
+            <button class="button button--secondary">Secundario</button>
+            <button class="button button--outline">Outline</button>
+            <button class="button button--danger">Peligro</button>
+            <button class="button button--icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>Con icono</button>
+            <button class="button button--disabled" disabled>Desabilitado</button>
+        </div>
+    </aside>
+
+    <!-- TARJETA DE PRODUCTO -->
+    <section class="products">
+        <article class="product-card">
+            <h2 class="product-card__title">2) Tarjeta de Producto</h2>
+            <div class="product-card__content"> 
+                <h4 class="product-card__badge">Nuevo</h4>
+                <img class="product-card__media" src="zapatillas.webp" alt="Producto">
+                <div class="product-card__info">
+                    <h3 class="product-card__name">Nombre del Producto</h3>
+                    <p class="product-card__description">Amortiguación ligera, malla respirable y suela antideslizante. Pefectas para entrenar todos los días.</p>
+                </div>
+                <div class="product-card__prices">
+                    <p class="product-card__price">$24.999</p>
+                    <p class="product-card__old-price">$29.999</p>
+                </div>
+                <div class="btn-group">
+                <button class="button button--buy">Comprar ahora</button>
+                <button class="button button--add">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95" /><path d="M3.69 8.56a9 9 0 0 0 -.69 3.44" /><path d="M3.69 15.44a9 9 0 0 0 1.95 2.92" /><path d="M8.56 20.31a9 9 0 0 0 3.44 .69" /><path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95" /><path d="M20.31 15.44a9 9 0 0 0 .69 -3.44" /><path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92" /><path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
+                    Añadir
+                </button>
+                </div>
+            </div>
+        </article>
+    </section>
+    </div>
+
+    </main>
+
+    <!-- SECCIONES GENERALES (full width) -->
+    <section class="section section--news" id="novedades">
+        <div class="section__inner">
+            <h2 class="section__title" >Novedades</h2>
+            <p class="section__text">Sección de relleno para probar el menú.</p>
+        </div>
+    </section>
+
+    <section class="section section--offers" id="ofertas">
+        <div class="section__inner">
+            <h2 class="section__title">Ofertas</h2>
+            <p class="section__text">Otra sección de relleno.</p>
+        </div>
+    </section>
+
+    <section class="section section--contact" id="contacto">
+        <div class="section__inner">
+            <h2 class="section__title">Contacto</h2>
+            <p class="section__text">Más contenido de ejemplo.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 MiTienda. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
