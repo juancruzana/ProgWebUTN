@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-yellow-primary: #fed20f; 
+    --color-orange-accent: #d68306; 
+    --color-blue-simpson: #1E88E5; 
+    
+    --color-error: #F44336; 
+    --color-card-bg: #FFFFFF; 
+    --color-text-light: #FFFFFF; 
+    --color-text-dark: #333333; 
+
+    --shadow-primary: 1px 3px 1px rgba(0,0,0,0.1), 1px 3px 4px rgba(0,0,0,0.2);
+    --shadow-card: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ======================================================= */
+/* BLOCK: page (body) */
+/* ======================================================= */
+.page {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--color-text-light);
+    min-height: 100vh;
+    background: linear-gradient(to left top, var(--color-orange-accent), var(--color-yellow-primary));
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modifier: is-hidden */
+.is-hidden {
+    display: none;
+}
+
+/* ======================================================= */
+/* BLOCK: header */
+/* ======================================================= */
+.header {
+    text-align: center;
+    padding: 7rem;
+    padding-bottom: 3rem;
+}
+
+.header__title {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    text-shadow: var(--shadow-primary);
+}
+
+/* Nota: Tu HTML usa <p class="header__subtitle">, ajustado de h2 a p */
+.header__subtitle {
+    font-size: 2rem;
+    font-weight: normal;
+    text-shadow: var(--shadow-primary);
+    opacity: 0.8;
+}
+
+/* Responsive para header */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+    .header__title {
+        font-size: 2rem;
+    }
+    .header__subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* ======================================================= */
+/* BLOCK: main */
+/* ======================================================= */
+.main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Responsive para main */
+@media (max-width: 768px) {
+    .main {
+        padding: 0 0.5rem;
+        gap: 1rem;
+    }
+}
+
+/* ======================================================= */
+/* BLOCK: button (aplicado a .controls__button) */
+/* ======================================================= */
+.button {
+    background: var(--color-blue-simpson);
+    color: var(--color-text-light);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background:#1377cecc;
+    transform: translateY(-2px); 
+}
+
+/* ======================================================= */
+/* BLOCK: loading */
+/* ======================================================= */
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loading__spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    animation: spin 1s linear infinite;
+}
+
+.loading__text {
+    font-size: 1.5rem;
+}
+
+/* Animación de giro */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ======================================================= */
+/* BLOCK: error */
+/* ======================================================= */
+.error {
+    background: var(--color-error);
+    color: var(--color-text-light);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ======================================================= */
+/* BLOCK: characters */
+/* ======================================================= */
+.characters__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+}
+
+/* Responsive para characters__container */
+@media (max-width: 480px) {
+    .characters__container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem;
+    }
+}
+
+/* ======================================================= */
+/* BLOCK: character-card (Creado dinámicamente) */
+/* ======================================================= */
+.character-card {
+    background: var(--color-card-bg);
+    color: var(--color-text-dark);
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-card__image {
+    background: #f0f0f0;
+    width: 100%; 
+    max-width: 345px; 
+    height: auto; 
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.character-card__name {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.character-card__phrase {
+    background: #ebeaea;
+    opacity: 0.8;
+    font-weight: bold;
+    width: 100%;
+    min-height: 60px;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    border-radius: 10px;
+    text-align:start;
+    display: flex;
+    align-items: center;
+}
+
+/* ======================================================= */
+/* BLOCK: footer */
+/* ======================================================= */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--color-text-light);
+    opacity: 0.8;
+    padding-bottom: 2rem;
+}
+
+.footer__link {
+    color: var(--color-text-light);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}

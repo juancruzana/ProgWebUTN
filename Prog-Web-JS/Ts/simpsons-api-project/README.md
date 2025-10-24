@@ -1,0 +1,1 @@
+Explicar en un comentario dentro del README.md qué hace este comando y qué archivo genera.

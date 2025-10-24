@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de The Simpsons API con TypeScript</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body class="page">
+
+    <header class="header">
+        <h1 class="header__title">Los Simpsons API</h1>
+        <p class="header__subtitle">Encuentra personajes y frases célebres de Springfield.</p>
+    </header>
+
+    <main class="main">
+
+        <section class="controls">
+            <button class="controls__button button" id="load-characters-btn">
+                Cargar Personajes
+            </button>
+        </section>
+
+        <section class="loading is-hidden" id="loading-section">
+            <div class="loading__spinner"></div>
+            <p class="loading__text">Cargando personajes...</p>
+        </section>
+
+        <div class="error is-hidden" id="error-message-div">
+            <p class="error__text"></p>
+        </div>
+
+        <section class="characters">
+            <div class="characters__container" id="characters-container">
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            Datos proporcionados por: 
+            <a href="https://thesimpsonsapi.com/docs" target="_blank" class="footer__link">
+                The Simpsons Quote API
+            </a>
+        </p>
+    </footer>
+
+    <script src="./dist/main.js" type="module"></script>
+</body>
+</html>
